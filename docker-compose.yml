@@ -1,0 +1,13 @@
+services:
+  habbo-origins-dcr:
+    build:
+      dockerfile: Dockerfile
+      context: .
+    container_name: habbo-origins-dcr
+    ports:
+      - "8080:80"
+    volumes:
+      - ./src/data:/var/www/html
+      - ./src/verify-update.php:/app/verify-update.php
+    environment:
+      - ENV=local-docker
