@@ -12,3 +12,4 @@ Always latest DCRs:
 
 Get latest version txt:
 - https://origins.hiper.esp.br/latest.txt
+- https://origins.hiper.esp.br/last-check.txt
