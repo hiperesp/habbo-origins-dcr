@@ -1,5 +1,14 @@
 # Habbo Origins DCR
 
-Auto update DCR for Habbo Origins
+Auto updated DCR for Habbo Origins with public CORS
 
-Hosted at https://origins.hiper.esp.br/
+DCRs:
+- https://origins.hiper.esp.br/{version}/habbo.dcr
+- https://origins.hiper.esp.br/{version}/habbo-xl.dcr
+
+Always latest DCRs:
+- https://origins.hiper.esp.br/latest/habbo.dcr
+- https://origins.hiper.esp.br/latest/habbo-xl.dcr
+
+Get latest version txt:
+- https://origins.hiper.esp.br/latest.txt
