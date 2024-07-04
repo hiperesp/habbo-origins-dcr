@@ -7,7 +7,7 @@ services:
     ports:
       - "8080:80"
     volumes:
-      - ./src/data:/var/www/html
+      - ./src/app:/app
     environment:
       - AWS_BUCKET=
       - AWS_ENDPOINT=
