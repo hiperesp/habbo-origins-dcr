@@ -8,6 +8,8 @@ services:
       - "8080:80"
     volumes:
       - ./src/data:/var/www/html
-      - ./src/verify-update.php:/app/verify-update.php
     environment:
-      - ENV=local-docker
+      - AWS_BUCKET=
+      - AWS_ENDPOINT=
+      - AWS_ACCESS_KEY_ID=
+      - AWS_SECRET_ACCESS_KEY=
