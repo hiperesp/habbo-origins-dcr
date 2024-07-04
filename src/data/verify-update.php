@@ -11,6 +11,10 @@ $context = \stream_context_create([ "http" => [ "header" => $configs["ua"] ] ]);
 $json = \json_decode(\file_get_contents($configs["clienturls"], false, $context), true);
 $latestVersion = $json["shockwave-windows-version"];
 
+\file_put_contents('/tmp/last-check.txt', \date("Y-m-d H:i:s")."\n");
+$bucket->uploadFile("/tmp/last-check.txt", "last-check.txt");
+\unlink("/tmp/last-check.txt");
+
 echo "latest version: {$latestVersion}\n";
 if($bucket->hasFile("latest.txt")) {
     if($bucket->readFile("latest.txt") == $latestVersion) {
@@ -50,6 +54,7 @@ $bucket->deleteDir("latest");
 $bucket->copyRemoteDir("{$latestVersion}", "latest");
 $bucket->uploadFile("/tmp/latest.txt", "latest.txt");
 
+\unlink('/tmp/latest.txt');
 \unlink("/tmp/{$latestVersion}.lock");
 \rmdir("/tmp/{$latestVersion}");
 
