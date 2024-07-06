@@ -8,7 +8,8 @@ $configs = [
 ];
 $context = \stream_context_create([ "http" => [ "header" => $configs["ua"] ] ]);
 
-$json = \json_decode(\file_get_contents($configs["clienturls"], false, $context), true);
+$rawJson = \file_get_contents($configs["clienturls"], false, $context);
+$json = \json_decode($rawJson, true);
 $latestVersion = $json["shockwave-windows-version"];
 
 \file_put_contents('/tmp/last-check.txt', \date("Y-m-d H:i:s")."\n");
@@ -47,6 +48,52 @@ $zip->open($tmpfileUri);
 $zip->extractTo("/tmp/{$latestVersion}/");
 $zip->close();
 
+foreach([
+    "com.br" => "br",
+    "com" => "us",
+    "es" => "es",
+] as $tld => $region) {
+    $externalVariables = \file_get_contents("https://origins-gamedata.habbo.{$tld}/external_variables/1", false, $context);
+    $externalTexts = null;
+    $externalFigurepartlist = null;
+    $externalOverrideTexts = null;
+    if($externalVariables) {
+        foreach(\preg_split('/\r?\n/', $externalVariables) as $line) {
+            $keyVal = \explode("=", $line);
+            if(\count($keyVal) != 2) {
+                continue;
+            }
+            $key = $keyVal[0];
+            $val = $keyVal[1];
+
+            if($key == "external.texts.txt") {
+                $externalTexts = $val;
+            } elseif($key == "external.override.texts.txt") {
+                $externalOverrideTexts = $val;
+            } elseif($key == "external.figurepartlist.txt") {
+                $externalFigurepartlist = $val;
+            }
+        }
+        if(!\is_dir("/tmp/{$latestVersion}/external_variables/{$region}")) {
+            \mkdir("/tmp/{$latestVersion}/external_variables/{$region}", 0777, true);
+        }
+        \file_put_contents("/tmp/{$latestVersion}/external_variables/{$region}/external_variables.txt", $externalVariables);
+        if($externalTexts) {
+            \file_put_contents("/tmp/{$latestVersion}/external_variables/{$region}/external_texts.txt", \file_get_contents($externalTexts, false, $context));
+        }
+        if($externalOverrideTexts) {
+            \file_put_contents("/tmp/{$latestVersion}/external_variables/{$region}/external_override_texts.txt", \file_get_contents($externalOverrideTexts, false, $context));
+        }
+        if($externalFigurepartlist) {
+            \file_put_contents("/tmp/{$latestVersion}/external_variables/{$region}/external_figurepartlist.txt", \file_get_contents($externalFigurepartlist, false, $context));
+        }
+    }
+}
+
+foreach(createIndex("/tmp/{$latestVersion}") as $file) {
+    \file_put_contents("/tmp/{$latestVersion}/index.txt", "{$file}\n", FILE_APPEND);
+}
+\file_put_contents("/tmp/{$latestVersion}/download.txt", $rawJson);
 \file_put_contents('/tmp/latest.txt', $latestVersion);
 
 $bucket->uploadDir("/tmp/{$latestVersion}", "{$latestVersion}");
@@ -56,9 +103,32 @@ $bucket->uploadFile("/tmp/latest.txt", "latest.txt");
 
 \unlink('/tmp/latest.txt');
 \unlink("/tmp/{$latestVersion}.lock");
+foreach(new \RecursiveIteratorIterator( new \RecursiveDirectoryIterator("/tmp/{$latestVersion}", \RecursiveDirectoryIterator::SKIP_DOTS), \RecursiveIteratorIterator::CHILD_FIRST ) as $fileinfo) {
+    $todo = ($fileinfo->isDir() ? 'rmdir' : 'unlink');
+    $todo($fileinfo->getRealPath());
+}
 \rmdir("/tmp/{$latestVersion}");
 
 echo "updated\n";
+
+function createIndex($dir) {
+    $index = [];
+    $files = \scandir($dir);
+    foreach($files as $file) {
+        if($file == "." || $file == "..") {
+            continue;
+        }
+        if(\is_dir("{$dir}/{$file}")) {
+            $index[] = "{$file}/";
+            foreach(createIndex("{$dir}/{$file}") as $subfile) {
+                $index[] = "  {$subfile}";
+            }
+        } else {
+            $index[] = "{$file}";
+        }
+    }
+    return $index;
+}
 
 class Bucket {
     private $s3;
