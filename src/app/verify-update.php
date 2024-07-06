@@ -90,10 +90,11 @@ foreach([
     }
 }
 
+\file_put_contents("/tmp/{$latestVersion}/download.txt", $rawJson);
+\file_put_contents("/tmp/{$latestVersion}/index.txt", "");
 foreach(createIndex("/tmp/{$latestVersion}") as $file) {
     \file_put_contents("/tmp/{$latestVersion}/index.txt", "{$file}\n", FILE_APPEND);
 }
-\file_put_contents("/tmp/{$latestVersion}/download.txt", $rawJson);
 \file_put_contents('/tmp/latest.txt', $latestVersion);
 
 $bucket->uploadDir("/tmp/{$latestVersion}", "{$latestVersion}");
