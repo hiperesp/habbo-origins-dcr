@@ -1,0 +1,282 @@
+.DS_Store
+Habbo.exe
+HabboHotel-obr-xl.exe
+HabboHotel-obr.exe
+HabboHotel-od-xl.INI
+HabboHotel-od-xl.exe
+HabboHotel-od.INI
+HabboHotel-od.exe
+HabboHotel-oes-xl.exe
+HabboHotel-oes.exe
+HabboHotel-ous-xl.exe
+HabboHotel-ous.exe
+Xtras/
+  .DS_Store
+  Core/
+    Actor Control.x32
+    DirectSound.x32
+    Fireworks Import.x32
+    LZComprs.x32
+    MacroMix.x32
+    Mix/
+      AVI Agent.x32
+      BMP Agent.x32
+      BitdReader.x32
+      Flash Agent.x32
+      GIF Agent.x32
+      Image Translator Helper.x32
+      JPEG Agent.x32
+      JPEG Export.x32
+      MPEG 3 Import Export.x32
+      MacPaint Import.x32
+      Mix Services.x32
+      PICT Agent.x32
+      PNG Import Export.x32
+      Palette Import.x32
+      Photoshop 3.0 Import.x32
+      Photoshop CLUT Import.x32
+      QuickTime Agent.x32
+      SWA Import Export.x32
+      Script Agent.x32
+      Sound Import Export.x32
+      Sun AU Import Export.x32
+      TIFF Import Export.x32
+      Targa Import Export.x32
+    Net Support/
+      INetURL.x32
+      NetFile.x32
+    QTExport.x32
+    Squish.x32
+    SwaCmpr.x32
+    TextXtra.x32
+  LeechProtectionRemovalHelp.x32
+  Media Element/
+    3DAuth.x32
+    ActiveX/
+      ActXPriv.x32
+      ActiveX.hlp
+      ActiveX.x32
+      Redist/
+        .DS_Store
+    Animated GIF Asset.x32
+    Animated GIF Options.x32
+    Cursor Asset.x32
+    Cursor Options.x32
+    DVD Asset.x32
+    DVD Authoring.x32
+    Flash Asset/
+      Flash Asset Options.x32
+      Flash Asset.x32
+    Font Asset Dialog.x32
+    Font Asset.x32
+    Font Xtra.x32
+    QT/
+      QT6Asset.x32
+      QTAuth.x32
+    RealMedia Asset.x32
+    RealMedia Authoring.x32
+    SWADCmpr.x32
+    SWAOpt.x32
+    SWAStrm.x32
+    Shockwave 3D Asset.x32
+    Sound Control.x32
+    Text Asset.x32
+    TextAuth.x32
+    Vector Editor Xtra.x32
+    Windows Media Asset.x32
+    Windows Media Auth.x32
+  Multiusr.x32
+  Scripting/
+    Mui Dialog.x32
+    NetLingo.x32
+    Speech.x32
+    UIHelper.x32
+    UnzipXtra.x32
+    XMLParser.x32
+    ZipXtra.x32
+  Tool/
+    Filter Support/
+      Dsbl_plg.txt
+      Pshopflt.x32
+      mmpsf32.dll
+    SWACnvrt.x32
+  Transition/
+download.txt
+empty.cct
+empty.cct.cct
+external_variables/
+  br/
+    external_figurepartlist.txt
+    external_override_texts.txt
+    external_texts.txt
+    external_variables.txt
+  es/
+    external_figurepartlist.txt
+    external_override_texts.txt
+    external_texts.txt
+    external_variables.txt
+  us/
+    external_figurepartlist.txt
+    external_override_texts.txt
+    external_texts.txt
+    external_variables.txt
+fuse_client.cct
+habbo-xl.dcr
+habbo.dcr
+hh_badges.cct
+hh_bbinterface.cct
+hh_buffer.cct
+hh_cat_code.cct
+hh_cat_gfx_all.cct
+hh_cat_new.cct
+hh_club.cct
+hh_dev.cct
+hh_dynamic_downloader.cct
+hh_entry.cct
+hh_entry_base.cct
+hh_entry_br.cct
+hh_entry_es.cct
+hh_entry_init.cct
+hh_entry_ru.cct
+hh_entry_uk.cct
+hh_entry_us.cct
+hh_entry_wnt.cct
+hh_friend_list.cct
+hh_furni_armas.cct
+hh_furni_armas_50.cct
+hh_furni_classes.cct
+hh_furni_drken.cct
+hh_furni_drken_50.cct
+hh_furni_funky.cct
+hh_furni_funky_50.cct
+hh_furni_items.cct
+hh_furni_items_50.cct
+hh_furni_small.cct
+hh_furni_special.cct
+hh_furni_special_50.cct
+hh_game_bb.cct
+hh_game_bb_room.cct
+hh_game_bb_ui.cct
+hh_games.cct
+hh_gamesys.cct
+hh_human.cct
+hh_human_50_acc_chest.cct
+hh_human_50_acc_eye.cct
+hh_human_50_acc_face.cct
+hh_human_50_acc_head.cct
+hh_human_50_acc_waist.cct
+hh_human_50_body.cct
+hh_human_50_face.cct
+hh_human_50_fx.cct
+hh_human_50_hair.cct
+hh_human_50_hats.cct
+hh_human_50_item.cct
+hh_human_50_leg.cct
+hh_human_50_shirt.cct
+hh_human_50_shoe.cct
+hh_human_acc_chest.cct
+hh_human_acc_eye.cct
+hh_human_acc_face.cct
+hh_human_acc_head.cct
+hh_human_acc_waist.cct
+hh_human_body.cct
+hh_human_face.cct
+hh_human_fx.cct
+hh_human_hair.cct
+hh_human_hats.cct
+hh_human_item.cct
+hh_human_leg.cct
+hh_human_shirt.cct
+hh_human_shoe.cct
+hh_ig.cct
+hh_ig_game_bb.cct
+hh_ig_game_bb_room.cct
+hh_ig_game_bb_ui.cct
+hh_ig_gamesys.cct
+hh_ig_interface.cct
+hh_interface.cct
+hh_kiosk_room.cct
+hh_messenger.cct
+hh_navigator.cct
+hh_paalu.cct
+hh_patch_br.cct
+hh_patch_es.cct
+hh_patch_uk.cct
+hh_people_1.cct
+hh_people_2.cct
+hh_people_paalu.cct
+hh_people_pool.cct
+hh_people_small_1.cct
+hh_people_small_2.cct
+hh_pets.cct
+hh_pets_50.cct
+hh_pets_common.cct
+hh_photo.cct
+hh_poll.cct
+hh_purse.cct
+hh_recycler.cct
+hh_registrat.cct
+hh_room.cct
+hh_room_ballroom.cct
+hh_room_ballroom_ing.cct
+hh_room_bar.cct
+hh_room_bb_game.cct
+hh_room_cafe.cct
+hh_room_chill.cct
+hh_room_cinema.cct
+hh_room_clubmammoth.cct
+hh_room_den.cct
+hh_room_disco.cct
+hh_room_disco_nokia.cct
+hh_room_dustylounge.cct
+hh_room_emperors.cct
+hh_room_erics.cct
+hh_room_floatinggarden.cct
+hh_room_floorlobbies.cct
+hh_room_gamehall.cct
+hh_room_gate_park.cct
+hh_room_gold.cct
+hh_room_habburger.cct
+hh_room_hallway.cct
+hh_room_icecafe.cct
+hh_room_kitchen.cct
+hh_room_library.cct
+hh_room_lobby.cct
+hh_room_netcafe.cct
+hh_room_nlobby.cct
+hh_room_old_skool.cct
+hh_room_orient.cct
+hh_room_park.cct
+hh_room_park.dcr
+hh_room_park_au.cct
+hh_room_park_es.cct
+hh_room_park_fi.cct
+hh_room_park_general.cct
+hh_room_park_uk.cct
+hh_room_picnic.cct
+hh_room_picnic_pirate.cct
+hh_room_pizza.cct
+hh_room_pizza_hw08.cct
+hh_room_pool.cct
+hh_room_private.cct
+hh_room_pub.cct
+hh_room_rooftop.cct
+hh_room_space_cafe.cct
+hh_room_sport.cct
+hh_room_starlounge bug.cct
+hh_room_starlounge.cct
+hh_room_starlounge_cloudy.cct
+hh_room_sun_terrace.cct
+hh_room_sun_terrace_xms08.cct
+hh_room_sunsetcafe.cct
+hh_room_tearoom.cct
+hh_room_terrace.cct
+hh_room_theater.cct
+hh_room_theater_hbowood.cct
+hh_room_tv_studio.cct
+hh_room_tv_studio_general.cct
+hh_room_tv_studio_viva.cct
+hh_room_ui.cct
+hh_room_utils.cct
+hh_shared.cct
+index.txt

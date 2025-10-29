@@ -1,0 +1,18 @@
+download.txt
+external_variables/
+  br/
+    external_figurepartlist.txt
+    external_override_texts.txt
+    external_texts.txt
+    external_variables.txt
+  es/
+    external_figurepartlist.txt
+    external_override_texts.txt
+    external_texts.txt
+    external_variables.txt
+  us/
+    external_figurepartlist.txt
+    external_override_texts.txt
+    external_texts.txt
+    external_variables.txt
+index.txt
